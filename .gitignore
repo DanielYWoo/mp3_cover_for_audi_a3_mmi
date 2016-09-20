@@ -1,0 +1,28 @@
+# Mac OSX
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# IDEA
+*.iml
+*.ipr
+*.iws
+.idea
+*.log
+*.out
+pom.xml.versionsBackup
+
+#maven
+*.class
+target/
+
+#eclipse
+.project
+.workspace
+.settings
+.classpath
+.metadata
+
+#devDependencies
+node_modules
