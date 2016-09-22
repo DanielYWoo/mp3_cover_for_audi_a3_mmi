@@ -21,7 +21,7 @@ import java.util.Iterator;
 
 public class Converter {
 
-    private static final int SIZE = 400;
+    private static final int SIZE = 480;
     private JTextArea log;
 
     public Converter(JTextArea log) {
