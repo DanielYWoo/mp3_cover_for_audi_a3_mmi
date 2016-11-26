@@ -29,7 +29,11 @@ public class Converter {
     }
 
     public void convert(File dir) {
-        Arrays.stream(dir.listFiles((f) -> f.getName().endsWith(".mp3"))).forEach(this::process);
+        File[] mp3Files = dir.listFiles((f) -> f.getName().toLowerCase().endsWith(".mp3"));
+        int totalCount = dir.listFiles() == null ? 0 : dir.listFiles().length;
+        int mp3Count = mp3Files == null ? 0 : mp3Files.length;
+        log.append("Found " + totalCount + " files (" + mp3Count + " mp3 files)");
+        if (mp3Files != null) Arrays.stream(mp3Files).forEach(this::process);
     }
 
     private void process(File file) {
